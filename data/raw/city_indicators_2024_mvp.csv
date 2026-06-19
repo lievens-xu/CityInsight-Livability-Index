@@ -1,0 +1,4 @@
+﻿city_id,year,gdp_per_capita,avg_salary_non_private,avg_salary_private,tertiary_industry_ratio,house_price,avg_rent,house_price_income_ratio_non_private,house_price_income_ratio_private,hospital_count,university_count,metro_station_count,pm25,good_air_days_ratio,park_count
+1,2024,217424.0,239557.0,113914.0,78.2,47153.0,,17.7,37.3,503.0,69.0,,28.0,88.5,
+2,2024,206000.0,143611.0,86111.0,52.4,17646.0,,11.1,18.4,282.0,26.0,,29.0,84.2,
+3,2024,193180.0,165726.0,83388.0,66.7,21914.0,,11.9,23.7,315.0,53.0,,28.3,85.8,

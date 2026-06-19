@@ -1,0 +1,4 @@
+﻿city_id,city_name,year,economy_score,cost_score,service_score,environment_score,total_score,rank
+1,上海,2024,100.0,0.0,100.0,100.0,70.0,1
+3,南京,2024,19.6,81.8,38.8,53.6,47.2,2
+2,苏州,2024,15.4,100.0,0.0,0.0,35.4,3
