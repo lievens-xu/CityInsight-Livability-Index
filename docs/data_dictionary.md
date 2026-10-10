@@ -1,44 +1,60 @@
 # 数据字典
 
-## city_basic.csv
+## 原始与参考输入
 
-| 字段名 | 含义 |
+`data/raw/city_basic.csv`：`city_id`唯一正整数；`city_name`唯一城市名称；`province`省市；`region`区域；`city_level`行政类型。已统一为UTF-8带BOM。
+
+`data/raw/data_source_tracking_2024.csv`：一行一个城市、年份、指标，三者唯一。
+
+| 字段 | 定义 |
 |---|---|
-| city_id | 城市编号 |
-| city_name | 城市名称 |
-| province | 所属省份 |
-| region | 所属区域 |
-| city_level | 城市级别 |
+| indicator / category | 机器指标名 / 分类标签 |
+| city / year | 城市名 / 数据所属年度，不是网页发布日期 |
+| value / unit | 数值 / 标准单位；待采集值为空 |
+| source_name / source_url / source_type | 来源名称 / 公开链接 / official或third_party |
+| notes | 数据时点、统计口径、转换方法及待补原因 |
+| verification_status / verified_on | verified或pending / 最近核对日期 |
 
-## city_indicators_2024.csv
+`data/reference/ordinary_universities_2024.csv`：教育部普通高校名单十城381所子集。字段为`city_name`、`school_name`、`school_code`（10位字符串）、`education_level`（本科/专科）。按所在地聚合，不包含独立成人高校名单；截至2024-06-20。
 
-| 字段名 | 含义 | 指标方向 |
+`data/raw/city_indicators_2024.csv` 是早期六维设计模板，**不参与当前流程**。实际宽表由来源表生成：`city_indicators_2024_mvp.csv`。
+
+## 实际宽表指标
+
+| 字段 | 单位 | 方向 / 定义 |
 |---|---|---|
-| gdp_per_capita | 人均 GDP | 正向 |
-| avg_salary_non_private | 城镇非私营单位就业人员平均工资 | 正向 |
-| avg_salary_private | 城镇私营单位就业人员平均工资 | 正向 |
-| tertiary_industry_ratio | 第三产业占比 | 正向 |
-| new_company_count | 新增企业数量 | 正向 |
-| house_price | 平均房价 | 负向 |
-| avg_rent | 平均租金 | 负向 |
-| house_price_income_ratio_non_private | 基于90㎡住房总价和城镇非私营单位就业人员平均工资计算的房价收入比 | 负向 |
-| house_price_income_ratio_private | 基于90㎡住房总价和城镇私营单位就业人员平均工资计算的房价收入比 | 负向 |
-| cost_of_living_index | 生活成本指数 | 负向 |
-| hospital_count | 医院数量 | 正向 |
-| university_count | 高校数量 | 正向 |
-| metro_station_count | 地铁站数量 | 正向 |
-| bus_station_count | 公交站数量 | 正向 |
-| shopping_mall_count | 商场数量 | 正向 |
-| aqi | AQI | 负向 |
-| pm25 | PM2.5 | 负向 |
-| good_air_days_ratio | 空气质量优良天数比例 | 正向 |
-| park_count | 公园数量 | 正向 |
-| green_coverage_ratio | 绿化覆盖率 | 正向 |
-| population_growth_rate | 人口增长率 | 正向 |
-| young_population_ratio | 年轻人口占比 | 正向 |
-| retail_sales_total | 社会消费品零售总额 | 正向 |
-| avg_temperature | 年平均气温 | 中性 |
-| high_temp_days | 高温天数 | 负向 |
-| low_temp_days | 低温天数 | 负向 |
-| rainy_days | 降雨天数 | 负向 |
-| humidity | 平均湿度 | 中性 |
+| city_id / year | 编号 / 年 | 所有10城市都保留一行，包括无值城市 |
+| gdp_per_capita | 元/人 | 正向；优先直接发布值，万元转元保留原精度 |
+| avg_salary_non_private | 元/年 | 正向；单位从业/就业人员税前年平均工资，不能混用在岗职工工资 |
+| avg_salary_private | 元/年 | 正向；单位从业/就业人员税前年平均工资 |
+| tertiary_industry_ratio | % | 正向；0–100，不是0–1 |
+| house_price | 元/平方米 | 负向；中指2024年12月市辖区固定样本二手住宅挂牌均值 |
+| rent_per_sqm | 元/平方米/月 | 负向；中指2024年12月住宅挂牌租金单价，非整套月租 |
+| house_price_income_ratio_non_private | 年 | 负向；90平方米房价/非私营年工资，派生值 |
+| house_price_income_ratio_private | 年 | 负向；90平方米房价/私营年工资，派生值 |
+| hospital_count | 个 | 正向；全部医院，不使用医院+卫生院合计或仅综合医院 |
+| university_count | 所 | 正向；教育部2024-06-20同一名单按所在地聚合 |
+| rail_station_count | 个 | 正向；2024年底全部城轨制式已投运车站，换乘去重，含有轨电车等 |
+| pm25 | μg/m³ | 负向；年均值，监测范围见notes |
+| good_air_days_ratio | % | 正向；年优良天比例，0–100 |
+| park_count | 个 | 正向；住建部2024城市建设年鉴表11-2城市公园数量，非全市城乡口径 |
+
+## 处理输出
+
+`livability_scores_2024.csv`包含原始宽表字段及：
+
+| 字段 | 定义 |
+|---|---|
+| city_name | 城市显示名 |
+| economy_score / cost_score / service_score / environment_score | 共同指标的维度均分，0–100；未参与排名留空 |
+| total_score / rank | 一位小数综合分 / 同年竞赛排名；未参与排名留空 |
+| coverage / available_indicators | 12个原始指标的覆盖率（0–1） / 有值数量 |
+| status | provisional或insufficient_data |
+| {dimension}_available | 该城市该维度有值的候选指标数量（成本含派生比值），不一定都进入最终模型 |
+| {indicator}_score | 实际进入共同指标模型的标准化分，未进入模型留空 |
+
+`livability_scores_2024.metadata.json`记录权重、比较组城市ID及实际共同指标。`data_quality_2024.json`记录原始指标缺失数与覆盖率。`preference_scenarios_2024.csv`与`weight_sensitivity_2024.json`记录偏好场景与权重敏感性。
+
+`dashboard/data/cities.json`与`cities.js`由同一CSV生成，严格将缺失值序列化为null，便于HTTP和离线页面读取。缺失数据不得替换为0。
+
+`data/reference/*_evidence.json`保存住房、城轨、公园统一来源的十城提取值、表格位置和口径。住房文件中的`avg_rent`为源报告租金单价，导入当前模型时映射为`rent_per_sqm`，单位不变。

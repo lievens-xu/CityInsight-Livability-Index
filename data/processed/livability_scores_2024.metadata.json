@@ -1,0 +1,50 @@
+{
+  "weights": {
+    "economy": 0.35,
+    "cost": 0.3,
+    "service": 0.2,
+    "environment": 0.15
+  },
+  "normalization": "within_year_common_indicators",
+  "score_status": "provisional",
+  "cohorts": {
+    "2024": {
+      "city_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "indicators": {
+        "economy": [
+          "gdp_per_capita",
+          "avg_salary_non_private",
+          "avg_salary_private",
+          "tertiary_industry_ratio"
+        ],
+        "cost": [
+          "house_price",
+          "rent_per_sqm",
+          "house_price_income_ratio_non_private",
+          "house_price_income_ratio_private"
+        ],
+        "service": [
+          "hospital_count",
+          "university_count",
+          "rail_station_count"
+        ],
+        "environment": [
+          "pm25",
+          "good_air_days_ratio",
+          "park_count"
+        ]
+      }
+    }
+  }
+}

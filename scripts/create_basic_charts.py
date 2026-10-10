@@ -1,147 +1,75 @@
+"""Headless charts with portable font fallback and honest cohort labels."""
 from pathlib import Path
-import pandas as pd
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from matplotlib import font_manager
 import numpy as np
+from model import BASE_DIR, read_csv_safely
 
-BASE_DIR = Path(__file__).resolve().parents[1]
-
-SCORE_PATH = BASE_DIR / "data" / "processed" / "livability_scores_2024.csv"
-OUTPUT_DIR = BASE_DIR / "dashboard" / "figures"
-
-OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-
-
-def read_csv_safely(path):
-    encodings = ["utf-8-sig", "utf-8", "gbk", "gb18030"]
-
-    for enc in encodings:
-        try:
-            return pd.read_csv(path, encoding=enc)
-        except UnicodeDecodeError:
-            continue
-
-    raise ValueError(f"Cannot decode file: {path}")
-
-
-def setup_chinese_font():
-    plt.rcParams["font.sans-serif"] = ["Microsoft YaHei", "SimHei", "Arial Unicode MS"]
-    plt.rcParams["axes.unicode_minus"] = False
-
-
-def plot_total_score_ranking(df):
-    data = df.sort_values("total_score", ascending=True)
-
-    plt.figure(figsize=(10, 6))
-    plt.barh(data["city_name"], data["total_score"])
-    plt.xlabel("宜居总分")
-    plt.ylabel("城市")
-    plt.title("2024年长三角城市宜居指数排名")
-    plt.tight_layout()
-
-    output_path = OUTPUT_DIR / "01_total_score_ranking.png"
-    plt.savefig(output_path, dpi=300)
-    plt.close()
-
-    print(f"Saved: {output_path}")
-
-
-def plot_dimension_scores(df):
-    columns = [
-        "economy_score",
-        "cost_score",
-        "service_score",
-        "environment_score",
-    ]
-
-    data = df[["city_name"] + columns].copy()
-    data = data.sort_values("city_name")
-
-    x = np.arange(len(data["city_name"]))
-    width = 0.2
-
-    plt.figure(figsize=(12, 6))
-
-    for i, col in enumerate(columns):
-        plt.bar(x + i * width, data[col], width, label=col)
-
-    plt.xticks(x + width * 1.5, data["city_name"])
-    plt.ylabel("得分")
-    plt.title("各城市分项得分对比")
-    plt.legend()
-    plt.tight_layout()
-
-    output_path = OUTPUT_DIR / "02_dimension_scores.png"
-    plt.savefig(output_path, dpi=300)
-    plt.close()
-
-    print(f"Saved: {output_path}")
-
-
-def plot_city_radar(df, city_name):
-    row = df[df["city_name"] == city_name]
-
-    if row.empty:
-        print(f"City not found: {city_name}")
-        return
-
-    labels = ["经济机会", "生活成本", "公共服务", "环境质量"]
-    score_columns = [
-        "economy_score",
-        "cost_score",
-        "service_score",
-        "environment_score",
-    ]
-
-    values = row.iloc[0][score_columns].astype(float).tolist()
-
-    angles = np.linspace(0, 2 * np.pi, len(labels), endpoint=False).tolist()
-
-    values += values[:1]
-    angles += angles[:1]
-
-    plt.figure(figsize=(6, 6))
-    ax = plt.subplot(111, polar=True)
-    ax.plot(angles, values)
-    ax.fill(angles, values, alpha=0.2)
-    ax.set_xticks(angles[:-1])
-    ax.set_xticklabels(labels)
-    ax.set_ylim(0, 100)
-    ax.set_title(f"{city_name} 宜居维度雷达图")
-
-    output_path = OUTPUT_DIR / f"03_radar_{city_name}.png"
-    plt.savefig(output_path, dpi=300)
-    plt.close()
-
-    print(f"Saved: {output_path}")
+OUTPUT_DIR = BASE_DIR / 'dashboard/figures'
 
 
 def main():
-    setup_chinese_font()
+    available = {font.name for font in font_manager.fontManager.ttflist}
+    chinese = next((name for name in ('Arial Unicode MS', 'PingFang SC', 'Noto Sans CJK SC', 'Microsoft YaHei', 'SimHei') if name in available), None)
+    if chinese:
+        plt.rcParams['font.sans-serif'] = [chinese]
+    plt.rcParams['axes.unicode_minus'] = False
+    df = read_csv_safely(BASE_DIR / 'data/processed/livability_scores_2024.csv')
+    all_cities = df.copy()
+    df = df[df.status == 'provisional'].copy()
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    # Remove only the chart filenames owned by this generator (including stale top-city radar).
+    for pattern in ('01_total_score_ranking*.png', '02_dimension_scores*.png', '03_radar_*.png'):
+        for path in OUTPUT_DIR.glob(pattern):
+            path.unlink()
+    english = {1: 'Shanghai', 2: 'Suzhou', 3: 'Nanjing', 4: 'Hangzhou', 5: 'Ningbo', 6: 'Wuxi', 7: 'Hefei', 8: 'Changzhou', 9: 'Guangzhou', 10: 'Shenzhen'}
+    labels = ['经济机会', '生活成本', '公共服务', '环境质量'] if chinese else ['Economy', 'Affordability', 'Services', 'Environment']
+    for year, rows in df.groupby('year'):
+        names = rows.city_name if chinese else rows.city_id.map(english)
+        rows = rows.assign(label=names).sort_values('total_score')
+        suffix = '' if df.year.nunique() == 1 else f'_{int(year)}'
+        fig, ax = plt.subplots(figsize=(9, 5), layout='constrained')
+        ax.barh(rows.label, rows.total_score, color='#147d78')
+        ax.bar_label(ax.containers[0], fmt='%.1f', padding=4)
+        ax.set(xlim=(0, 105), xlabel='Score (0–100)', title=f'{int(year)} · Provisional ranking · {len(rows)} comparable cities')
+        ax.spines[['top', 'right']].set_visible(False)
+        fig.savefig(OUTPUT_DIR / f'01_total_score_ranking{suffix}.png', dpi=180)
+        plt.close(fig)
+        fig, ax = plt.subplots(figsize=(10, 5), layout='constrained')
+        x = np.arange(len(rows))
+        for i, (dim, label) in enumerate(zip(('economy', 'cost', 'service', 'environment'), labels)):
+            ax.bar(x + (i - 1.5) * .2, rows[f'{dim}_score'], .2, label=label)
+        ax.set(xticks=x, xticklabels=rows.label, ylim=(0, 110), title=f'{int(year)} · Dimension comparison (common indicators)')
+        ax.legend(loc='upper center', ncols=4)
+        fig.savefig(OUTPUT_DIR / f'02_dimension_scores{suffix}.png', dpi=180)
+        plt.close(fig)
+        top = rows.sort_values(['rank', 'city_id']).iloc[0]
+        angles = np.linspace(0, 2 * np.pi, 4, endpoint=False)
+        values = [top[f'{dim}_score'] for dim in ('economy', 'cost', 'service', 'environment')]
+        fig, ax = plt.subplots(figsize=(6, 6), subplot_kw={'polar': True}, layout='constrained')
+        ax.plot(np.append(angles, angles[0]), values + values[:1], color='#147d78')
+        ax.fill(np.append(angles, angles[0]), values + values[:1], color='#147d78', alpha=.15)
+        ax.set(xticks=angles, xticklabels=labels, ylim=(0, 100), title=f'{top.label} · {int(year)} · Provisional profile')
+        fig.savefig(OUTPUT_DIR / f'03_radar_{top.city_name}{suffix}.png', dpi=180)
+        plt.close(fig)
+    for year, rows in all_cities.groupby('year'):
+        rows = rows.dropna(subset=['gdp_per_capita', 'pm25'])
+        fig, ax = plt.subplots(figsize=(9, 5), layout='constrained')
+        ax.scatter(rows.gdp_per_capita / 1000, rows.pm25, s=75, color='#147d78')
+        for row in rows.itertuples():
+            name = row.city_name if chinese else english.get(row.city_id, str(row.city_id))
+            ax.annotate(name, (row.gdp_per_capita / 1000, row.pm25), xytext=(5, 7), textcoords='offset points', fontsize=9)
+        ax.set(xlabel='GDP per capita (thousand CNY)', ylabel='Annual PM2.5 (micrograms/m³)',
+               title=f'{int(year)} · {len(rows)} cities · Economic output and air quality')
+        ax.margins(.12)
+        ax.spines[['top', 'right']].set_visible(False)
+        suffix = '' if all_cities.year.nunique() == 1 else f'_{int(year)}'
+        fig.savefig(OUTPUT_DIR / f'04_gdp_vs_pm25{suffix}.png', dpi=180)
+        plt.close(fig)
+    print(f'Generated charts for {df.year.nunique()} annual cohort(s): {OUTPUT_DIR}')
 
-    df = read_csv_safely(SCORE_PATH)
 
-    numeric_columns = [
-        "economy_score",
-        "cost_score",
-        "service_score",
-        "environment_score",
-        "total_score",
-    ]
-
-    for col in numeric_columns:
-        if col in df.columns:
-            df[col] = pd.to_numeric(df[col], errors="coerce")
-
-    print("Data preview:")
-    print(df)
-
-    plot_total_score_ranking(df)
-    plot_dimension_scores(df)
-
-    # 给排名第一的城市画雷达图
-    top_city = df.sort_values("total_score", ascending=False).iloc[0]["city_name"]
-    plot_city_radar(df, top_city)
-
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

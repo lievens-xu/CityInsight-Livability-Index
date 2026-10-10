@@ -1,0 +1,79 @@
+{
+  "source_url": "https://infosharingp2-oss.camet.org.cn/resources/manual/2025/07/25/701542926557253.pdf",
+  "definition_page": 12,
+  "table_pages": [
+    16,
+    17,
+    18,
+    19
+  ],
+  "scope": "2024年底已投运全部城轨制式，换乘去重",
+  "cities": [
+    {
+      "city": "上海",
+      "rail_station_count": 485
+    },
+    {
+      "city": "苏州",
+      "rail_station_count": 262
+    },
+    {
+      "city": "南京",
+      "rail_station_count": 228
+    },
+    {
+      "city": "杭州",
+      "rail_station_count": 256
+    },
+    {
+      "city": "宁波",
+      "rail_station_count": 121
+    },
+    {
+      "city": "无锡",
+      "rail_station_count": 89
+    },
+    {
+      "city": "合肥",
+      "rail_station_count": 171
+    },
+    {
+      "city": "常州",
+      "rail_station_count": 43
+    },
+    {
+      "city": "广州",
+      "rail_station_count": 301
+    },
+    {
+      "city": "深圳",
+      "rail_station_count": 352
+    }
+  ],
+  "source_metadata": {
+    "title": "城市轨道交通2024年度统计和分析报告",
+    "publisher": "中国城市轨道交通协会",
+    "url": "https://infosharingp2-oss.camet.org.cn/resources/manual/2025/07/25/701542926557253.pdf",
+    "table": "表2 2024年各城市城轨交通运营线路制式规模统计汇总表",
+    "pdf_pages_1based": [
+      16,
+      17,
+      18,
+      19
+    ],
+    "printed_pages": [
+      10,
+      11,
+      12,
+      13
+    ],
+    "scope": "全部城市轨道交通制式的已投运线网车站，含地铁、轻轨、单轨、市域快轨、有轨电车、磁浮和APM等；换乘站去重，每车站计一次",
+    "definition_evidence": "PDF第12页（印刷第6页）：累计投运车站总计6651座（线网车站每个车站只计一次，换乘站不重复计算）；表2注4：所有线网车站数量含换乘站，每车站只计数一次",
+    "boundary_notes": [
+      "广佛线位于佛山市15站计佛山",
+      "杭海城际铁路计嘉兴",
+      "南京轨道交通宁句线计南京"
+    ],
+    "sha256": "ebfa8d0134ba1e00ca65233e8e8fe38baa34ccf794cb3aca05063461696f2d19"
+  }
+}
