@@ -1,0 +1,68 @@
+{
+  "valid": true,
+  "city_year_rows": 8,
+  "missing_by_indicator": {
+    "gdp_per_capita": 0,
+    "avg_salary_non_private": 2,
+    "avg_salary_private": 2,
+    "tertiary_industry_ratio": 0,
+    "house_price": 5,
+    "avg_rent": 8,
+    "hospital_count": 3,
+    "university_count": 0,
+    "metro_station_count": 8,
+    "pm25": 0,
+    "good_air_days_ratio": 0,
+    "park_count": 8
+  },
+  "coverage": [
+    {
+      "city_id": 1,
+      "year": 2024,
+      "available": 9,
+      "expected": 12
+    },
+    {
+      "city_id": 2,
+      "year": 2024,
+      "available": 9,
+      "expected": 12
+    },
+    {
+      "city_id": 3,
+      "year": 2024,
+      "available": 9,
+      "expected": 12
+    },
+    {
+      "city_id": 4,
+      "year": 2024,
+      "available": 6,
+      "expected": 12
+    },
+    {
+      "city_id": 5,
+      "year": 2024,
+      "available": 5,
+      "expected": 12
+    },
+    {
+      "city_id": 6,
+      "year": 2024,
+      "available": 7,
+      "expected": 12
+    },
+    {
+      "city_id": 7,
+      "year": 2024,
+      "available": 8,
+      "expected": 12
+    },
+    {
+      "city_id": 8,
+      "year": 2024,
+      "available": 7,
+      "expected": 12
+    }
+  ]
+}

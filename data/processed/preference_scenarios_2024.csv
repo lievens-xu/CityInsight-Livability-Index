@@ -1,0 +1,13 @@
+﻿year,scenario,city_id,city_name,total_score,rank
+2024,balanced,1,上海,70.0,1
+2024,balanced,3,南京,46.2,2
+2024,balanced,2,苏州,35.4,3
+2024,career,1,上海,80.0,1
+2024,career,3,南京,37.4,2
+2024,career,2,苏州,28.5,3
+2024,budget,1,上海,45.0,3
+2024,budget,3,南京,58.9,1
+2024,budget,2,苏州,58.1,2
+2024,green,1,上海,80.0,1
+2024,green,3,南京,48.8,2
+2024,green,2,苏州,23.1,3

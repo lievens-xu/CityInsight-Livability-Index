@@ -1,4 +1,9 @@
-﻿city_id,city_name,year,economy_score,cost_score,service_score,environment_score,total_score,rank
-1,上海,2024,100.0,0.0,100.0,100.0,70.0,1
-3,南京,2024,19.6,81.8,38.8,53.6,47.2,2
-2,苏州,2024,15.4,100.0,0.0,0.0,35.4,3
+﻿city_id,year,gdp_per_capita,avg_salary_non_private,avg_salary_private,tertiary_industry_ratio,house_price,avg_rent,house_price_income_ratio_non_private,house_price_income_ratio_private,hospital_count,university_count,metro_station_count,pm25,good_air_days_ratio,park_count,city_name,coverage,available_indicators,status,economy_score,economy_available,cost_score,cost_available,service_score,service_available,environment_score,environment_available,total_score,rank,gdp_per_capita_score,avg_salary_non_private_score,avg_salary_private_score,tertiary_industry_ratio_score,house_price_score,avg_rent_score,house_price_income_ratio_non_private_score,house_price_income_ratio_private_score,hospital_count_score,university_count_score,metro_station_count_score,pm25_score,good_air_days_ratio_score,park_count_score
+1,2024,217100.0,239557.0,113914.0,78.2,47153.0,,17.7,37.3,503.0,69.0,,28.0,88.5,,上海,0.75,9,provisional,100.0,4,0.0,3,100.0,2,100.0,2,70.0,1,100.0,100.0,100.0,100.0,0.0,,0.0,0.0,100.0,100.0,,100.0,100.0,
+3,2024,193483.0,160374.0,83388.0,66.7,21914.0,,12.3,23.7,315.0,52.0,,28.3,85.8,,南京,0.75,9,provisional,18.601,4,80.1901,3,38.1479,2,53.6047,2,46.2,2,0.0,18.9777959684846,0.0,55.4263565891473,85.53563561188871,,83.07692307692307,71.95767195767195,14.93212669683258,61.36363636363637,,69.99999999999993,37.20930232558129,
+2,2024,206000.0,141827.0,86111.0,52.4,17646.0,,11.2,18.4,282.0,25.0,,29.0,84.2,,苏州,0.75,9,provisional,15.4801,4,100.0,3,0.0,2,0.0,2,35.4,3,52.99995765761951,0.0,8.920264692393369,0.0,100.0,,100.0,100.0,0.0,0.0,,0.0,0.0,
+4,2024,173867.0,,,73.0,,,,,417.0,47.0,,30.0,81.7,,杭州,0.5,6,insufficient_data,,2,,0,,2,,2,,,,,,,,,,,,,,,,
+5,2024,186379.0,,,54.1,,,,,,14.0,,23.4,91.3,,宁波,0.4167,5,insufficient_data,,2,,0,,1,,2,,,,,,,,,,,,,,,,
+6,2024,216800.0,138395.0,81723.0,51.7,,,,,,14.0,,27.0,83.9,,无锡,0.5833,7,insufficient_data,,4,,0,,1,,2,,,,,,,,,,,,,,,,
+7,2024,136063.0,122162.0,66223.0,60.7,,,,,231.0,55.0,,33.7,86.1,,合肥,0.6667,8,insufficient_data,,4,,0,,2,,2,,,,,,,,,,,,,,,,
+8,2024,201000.0,131439.0,84165.0,50.8,,,,,,11.0,,33.0,79.8,,常州,0.5833,7,insufficient_data,,4,,0,,1,,2,,,,,,,,,,,,,,,,
