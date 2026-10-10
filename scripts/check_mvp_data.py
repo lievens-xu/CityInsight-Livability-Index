@@ -1,7 +1,15 @@
-"""Fail on errors, report missing coverage without turning it into zero."""
+"""Require complete, verified release data; never substitute missing values."""
 import json
 from model import BASE_DIR, RAW_INDICATORS, build_indicators, read_csv_safely, validate_indicators
 import pandas as pd
+
+
+def require_complete(cities, source, indicators):
+    expected = len(cities) * source.year.nunique() * len(RAW_INDICATORS)
+    if len(source) != expected or indicators[RAW_INDICATORS].isna().any().any():
+        raise ValueError("release: incomplete city/year/indicator coverage")
+    if not source.verification_status.eq('verified').all() or source.verified_on.isna().any():
+        raise ValueError("release: every source must be verified and dated")
 
 
 def main():
@@ -10,12 +18,13 @@ def main():
     indicators = read_csv_safely(BASE_DIR / "data/raw/city_indicators_2024_mvp.csv")
     expected = build_indicators(cities, source)
     validate_indicators(cities, indicators)
+    require_complete(cities, source, indicators)
     pd.testing.assert_frame_equal(
         indicators.sort_values(["year", "city_id"]).reset_index(drop=True), expected,
         check_dtype=False, check_exact=False, rtol=1e-12, atol=1e-12,
     )
     report = {
-        "valid": True, "city_year_rows": len(indicators),
+        "valid": True, "complete": True, "verified_source_rows": len(source), "city_year_rows": len(indicators),
         "missing_by_indicator": {col: int(indicators[col].isna().sum()) for col in RAW_INDICATORS},
         "coverage": [{"city_id": int(row.city_id), "year": int(row.year),
                       "available": int(indicators.loc[index, RAW_INDICATORS].notna().sum()),

@@ -40,10 +40,10 @@ def test_missing_city_retained_without_rank(fixture):
 
 def test_common_indicators_prevent_unequal_weights(fixture):
     cities, rows = fixture
-    rows.loc[1, 'avg_rent'] = np.nan
+    rows.loc[1, 'rent_per_sqm'] = np.nan
     result, meta = calculate_scores(cities, rows)
-    assert 'avg_rent' not in meta['2024']['indicators']['cost']
-    assert result.avg_rent_score.isna().all()
+    assert 'rent_per_sqm' not in meta['2024']['indicators']['cost']
+    assert result.rent_per_sqm_score.isna().all()
     for row in result.itertuples():
         expected = round(sum(getattr(row, dim + '_score') * weight for dim, weight in WEIGHTS.items()), 1)
         assert row.total_score == pytest.approx(expected)
@@ -77,7 +77,7 @@ def test_invalid_weights_fail(fixture, weights):
         calculate_scores(*fixture, weights)
 
 
-@pytest.mark.parametrize('col,value', [('avg_salary_private', 0), ('pm25', float('inf')), ('good_air_days_ratio', 101), ('hospital_count', 1.5), ('avg_rent', 'invalid')])
+@pytest.mark.parametrize('col,value', [('avg_salary_private', 0), ('pm25', float('inf')), ('good_air_days_ratio', 101), ('hospital_count', 1.5), ('rent_per_sqm', 'invalid')])
 def test_invalid_observations_fail(fixture, col, value):
     cities, rows = fixture
     rows[col] = rows[col].astype(object)
@@ -90,12 +90,29 @@ def test_source_integrity_and_complete_grid():
     cities = read_csv_safely(BASE_DIR / 'data/raw/city_basic.csv')
     source = read_csv_safely(BASE_DIR / 'data/raw/data_source_tracking_2024.csv')
     wide = build_indicators(cities, source)
-    assert len(wide) == 8
+    assert len(wide) == len(cities)
+    assert len(cities) == 10 and {'广州', '深圳'} <= set(cities.city_name)
+    from check_mvp_data import require_complete
+    require_complete(cities, source, wide)
     validate_indicators(cities, wide)
     for bad_source in (pd.concat([source, source.iloc[:1]]), source.assign(city='unknown'),
                        source.assign(unit='wrong'), source.assign(source_url='javascript:bad')):
         with pytest.raises(ValueError):
             build_indicators(cities, bad_source)
+
+
+def test_release_rejects_missing_and_unverified_data():
+    from check_mvp_data import require_complete
+    cities = read_csv_safely(BASE_DIR / 'data/raw/city_basic.csv')
+    source = read_csv_safely(BASE_DIR / 'data/raw/data_source_tracking_2024.csv')
+    missing = source.copy()
+    missing.loc[0, 'value'] = np.nan
+    with pytest.raises(ValueError, match='incomplete'):
+        require_complete(cities, missing, build_indicators(cities, missing))
+    pending = source.copy()
+    pending.loc[0, 'verification_status'] = 'pending'
+    with pytest.raises(ValueError, match='verified'):
+        require_complete(cities, pending, build_indicators(cities, pending))
 
 
 def test_reject_stale_ratios_and_duplicate_rows(fixture):
@@ -109,7 +126,7 @@ def test_reject_stale_ratios_and_duplicate_rows(fixture):
 
 def test_university_counts_match_common_national_reference():
     reference = pd.read_csv(BASE_DIR / 'data/reference/ordinary_universities_2024.csv', dtype={'school_code': str})
-    assert len(reference) == 287
+    assert len(reference) == 381
     assert reference.school_code.str.fullmatch(r'\d{10}').all()
     assert reference.school_code.is_unique
     source = read_csv_safely(BASE_DIR / 'data/raw/data_source_tracking_2024.csv')
@@ -130,8 +147,8 @@ def test_pipeline_source_errors_stop_instead_of_coercing():
 def test_disjoint_indicator_support_is_not_rankable(fixture):
     cities, rows = fixture
     # Each city has service data, but no single service indicator covers the cohort.
-    rows.loc[:, ['hospital_count', 'university_count', 'metro_station_count']] = np.nan
-    for i, col in enumerate(['hospital_count', 'university_count', 'metro_station_count']):
+    rows.loc[:, ['hospital_count', 'university_count', 'rail_station_count']] = np.nan
+    for i, col in enumerate(['hospital_count', 'university_count', 'rail_station_count']):
         rows.loc[i, col] = 10
     result, meta = calculate_scores(cities, rows)
     assert result.total_score.isna().all()

@@ -7,26 +7,89 @@
       "city_id": 1,
       "city_name": "上海",
       "best_rank": 1,
-      "worst_rank": 3,
-      "top_rank_weight_combinations": 226,
+      "worst_rank": 10,
+      "top_rank_weight_combinations": 146,
+      "weight_combinations": 286
+    },
+    {
+      "year": 2024,
+      "city_id": 9,
+      "city_name": "广州",
+      "best_rank": 1,
+      "worst_rank": 9,
+      "top_rank_weight_combinations": 49,
       "weight_combinations": 286
     },
     {
       "year": 2024,
       "city_id": 3,
       "city_name": "南京",
-      "best_rank": 1,
-      "worst_rank": 3,
-      "top_rank_weight_combinations": 31,
+      "best_rank": 2,
+      "worst_rank": 8,
+      "top_rank_weight_combinations": 0,
+      "weight_combinations": 286
+    },
+    {
+      "year": 2024,
+      "city_id": 4,
+      "city_name": "杭州",
+      "best_rank": 2,
+      "worst_rank": 10,
+      "top_rank_weight_combinations": 0,
       "weight_combinations": 286
     },
     {
       "year": 2024,
       "city_id": 2,
       "city_name": "苏州",
+      "best_rank": 2,
+      "worst_rank": 8,
+      "top_rank_weight_combinations": 0,
+      "weight_combinations": 286
+    },
+    {
+      "year": 2024,
+      "city_id": 6,
+      "city_name": "无锡",
       "best_rank": 1,
-      "worst_rank": 3,
-      "top_rank_weight_combinations": 29,
+      "worst_rank": 9,
+      "top_rank_weight_combinations": 21,
+      "weight_combinations": 286
+    },
+    {
+      "year": 2024,
+      "city_id": 5,
+      "city_name": "宁波",
+      "best_rank": 1,
+      "worst_rank": 9,
+      "top_rank_weight_combinations": 3,
+      "weight_combinations": 286
+    },
+    {
+      "year": 2024,
+      "city_id": 8,
+      "city_name": "常州",
+      "best_rank": 1,
+      "worst_rank": 10,
+      "top_rank_weight_combinations": 16,
+      "weight_combinations": 286
+    },
+    {
+      "year": 2024,
+      "city_id": 10,
+      "city_name": "深圳",
+      "best_rank": 1,
+      "worst_rank": 10,
+      "top_rank_weight_combinations": 43,
+      "weight_combinations": 286
+    },
+    {
+      "year": 2024,
+      "city_id": 7,
+      "city_name": "合肥",
+      "best_rank": 1,
+      "worst_rank": 10,
+      "top_rank_weight_combinations": 8,
       "weight_combinations": 286
     }
   ]

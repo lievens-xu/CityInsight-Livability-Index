@@ -15,7 +15,7 @@
 | notes | 数据时点、统计口径、转换方法及待补原因 |
 | verification_status / verified_on | verified或pending / 最近核对日期 |
 
-`data/reference/ordinary_universities_2024.csv`：教育部普通高校名单八城287所子集。字段为`city_name`、`school_name`、`school_code`（10位字符串）、`education_level`（本科/专科）。按所在地聚合，不包含独立成人高校名单；截至2024-06-20。
+`data/reference/ordinary_universities_2024.csv`：教育部普通高校名单十城381所子集。字段为`city_name`、`school_name`、`school_code`（10位字符串）、`education_level`（本科/专科）。按所在地聚合，不包含独立成人高校名单；截至2024-06-20。
 
 `data/raw/city_indicators_2024.csv` 是早期六维设计模板，**不参与当前流程**。实际宽表由来源表生成：`city_indicators_2024_mvp.csv`。
 
@@ -23,21 +23,21 @@
 
 | 字段 | 单位 | 方向 / 定义 |
 |---|---|---|
-| city_id / year | 编号 / 年 | 所有8城市都保留一行，包括无值城市 |
+| city_id / year | 编号 / 年 | 所有10城市都保留一行，包括无值城市 |
 | gdp_per_capita | 元/人 | 正向；优先直接发布值，万元转元保留原精度 |
 | avg_salary_non_private | 元/年 | 正向；单位从业/就业人员税前年平均工资，不能混用在岗职工工资 |
 | avg_salary_private | 元/年 | 正向；单位从业/就业人员税前年平均工资 |
 | tertiary_industry_ratio | % | 正向；0–100，不是0–1 |
-| house_price | 元/平方米 | 负向；现有历史记录为2024年12月二手房挂牌均价，待复核 |
-| avg_rent | 元/月 | 负向；待统一户型/面积及月份采集 |
+| house_price | 元/平方米 | 负向；中指2024年12月市辖区固定样本二手住宅挂牌均值 |
+| rent_per_sqm | 元/平方米/月 | 负向；中指2024年12月住宅挂牌租金单价，非整套月租 |
 | house_price_income_ratio_non_private | 年 | 负向；90平方米房价/非私营年工资，派生值 |
 | house_price_income_ratio_private | 年 | 负向；90平方米房价/私营年工资，派生值 |
 | hospital_count | 个 | 正向；全部医院，不使用医院+卫生院合计或仅综合医院 |
 | university_count | 所 | 正向；教育部2024-06-20同一名单按所在地聚合 |
-| metro_station_count | 个 | 正向；待统一换乘站是否去重 |
+| rail_station_count | 个 | 正向；2024年底全部城轨制式已投运车站，换乘去重，含有轨电车等 |
 | pm25 | μg/m³ | 负向；年均值，监测范围见notes |
 | good_air_days_ratio | % | 正向；年优良天比例，0–100 |
-| park_count | 个 | 正向；公园存量，不使用年度新增数量 |
+| park_count | 个 | 正向；住建部2024城市建设年鉴表11-2城市公园数量，非全市城乡口径 |
 
 ## 处理输出
 
@@ -56,3 +56,5 @@
 `livability_scores_2024.metadata.json`记录权重、比较组城市ID及实际共同指标。`data_quality_2024.json`记录原始指标缺失数与覆盖率。`preference_scenarios_2024.csv`与`weight_sensitivity_2024.json`记录偏好场景与权重敏感性。
 
 `dashboard/data/cities.json`与`cities.js`由同一CSV生成，严格将缺失值序列化为null，便于HTTP和离线页面读取。缺失数据不得替换为0。
+
+`data/reference/*_evidence.json`保存住房、城轨、公园统一来源的十城提取值、表格位置和口径。住房文件中的`avg_rent`为源报告租金单价，导入当前模型时映射为`rent_per_sqm`，单位不变。

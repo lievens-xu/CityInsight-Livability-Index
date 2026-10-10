@@ -7,22 +7,28 @@ gdp_per_capita,economy,宁波,2024,186379.0,元/人,国家统计局宁波调查�
 gdp_per_capita,economy,无锡,2024,216800.0,元/人,2024无锡统计公报,https://www.wuxi.gov.cn/doc/2025/04/28/4554447.shtml,official,人均GDP21.68万元换算元,verified,2026-10-10
 gdp_per_capita,economy,合肥,2024,136063.0,元/人,2024合肥统计公报（瑶海区政府官方镜像）,https://www.hfyaohai.gov.cn/group1/M00/92/B2/wKgEHmhSjH-AakEtABFDSWCfbvA509.pdf,official,采用公报直接发布值；全市口径,verified,2026-10-10
 gdp_per_capita,economy,常州,2024,201000.0,元/人,2024常州统计公报,https://www.changzhou.gov.cn/gi_news/618174366821577,official,人均GDP20.1万元换算元,verified,2026-10-10
+gdp_per_capita,economy,广州,2024,164171,元/人,2024广州统计公报,https://tjj.gz.gov.cn/gkmlpt/content/10/10203/mpost_10203416.html,official,全市口径；直接发布值,verified,2026-10-10
+gdp_per_capita,economy,深圳,2024,205714,元/人,2024深圳统计公报,https://tjj.sz.gov.cn/gkmlpt/content/12/12190/mpost_12190509.html,official,全市口径；直接发布值,verified,2026-10-10
 avg_salary_non_private,economy,上海,2024,239557.0,元/年,上海统计年鉴2025 表2.23,https://tjj.sh.gov.cn/tjnj/2025tjnj/C0223.htm,official,城镇单位就业人员年平均税前工资；非个人工资预测,verified,2026-10-10
 avg_salary_non_private,economy,苏州,2024,141827.0,元/年,苏州统计局2024工资热点问答,https://tjj.suzhou.gov.cn/sztjj/rdwd/202506/1e244bbcb19c4036922eb1c25f4991e1.shtml,official,修正原143611（在岗职工）为141827（单位从业人员），统一工资口径,verified,2026-10-10
 avg_salary_non_private,economy,南京,2024,160374.0,元/年,2024南京工资与收入,https://tjj.nanjing.gov.cn/bmfw/njsj/202506/t20250624_5592134.html,official,修正原165726（在岗职工）为160374（单位从业人员），避免混用工资口径,verified,2026-10-10
-avg_salary_non_private,economy,杭州,2024,,元/年,,,official,城镇非私营单位就业人员平均工资,pending,
-avg_salary_non_private,economy,宁波,2024,,元/年,,,official,城镇非私营单位就业人员平均工资,pending,
+avg_salary_non_private,economy,杭州,2024,162774,元/年,杭州统计局2024单位就业人员平均工资公报,https://www.hangzhou.gov.cn/art/2025/6/26/art_1229063404_4365938.html,official,单位就业人员年平均税前工资；非在岗职工口径,verified,2026-10-10
+avg_salary_non_private,economy,宁波,2024,138210,元/年,宁波统计局2024单位就业人员平均工资公报,https://tjj.ningbo.gov.cn/art/2025/6/30/art_1229042825_58922006.html,official,单位就业人员年平均税前工资；非在岗职工口径,verified,2026-10-10
 avg_salary_non_private,economy,无锡,2024,138395.0,元/年,无锡统计局2024城镇单位工资,https://tj.wuxi.gov.cn/doc/2025/06/30/4603407.shtml,official,单位就业人员年平均税前工资,verified,2026-10-10
 avg_salary_non_private,economy,合肥,2024,122162.0,元/年,安徽2024城镇非私营工资分市表（宿州统计局转载）,https://tjj.ahsz.gov.cn/sjsz/tjfx/195884431.html,official,单位就业人员年平均税前工资,verified,2026-10-10
 avg_salary_non_private,economy,常州,2024,131439.0,元/年,常州统计局2024工资情况,https://tjj.changzhou.gov.cn/html/tjj/2025/OPOEMFCL_0702/28760.html,official,单位就业人员年平均税前工资,verified,2026-10-10
+avg_salary_non_private,economy,广州,2024,159312,元/年,2024广州单位就业人员工资公报,https://tjj.gz.gov.cn/stats_newtjyw/tjsj/tjgb/qtgb/content/mpost_10330995.html,official,单位就业人员年平均税前工资；非在岗职工口径,verified,2026-10-10
+avg_salary_non_private,economy,深圳,2024,174478,元/年,2024深圳单位就业人员工资公报,https://tjj.sz.gov.cn/gkmlpt/content/12/12253/mpost_12253352.html,official,单位就业人员年平均税前工资；非在岗职工口径,verified,2026-10-10
 avg_salary_private,economy,上海,2024,113914.0,元/年,上海统计年鉴2025 表2.23,https://tjj.sh.gov.cn/tjnj/2025tjnj/C0223.htm,official,城镇单位就业人员年平均税前工资；非个人工资预测,verified,2026-10-10
 avg_salary_private,economy,苏州,2024,86111.0,元/年,苏州统计局2024工资热点问答,https://tjj.suzhou.gov.cn/sztjj/rdwd/202506/4523868b21894f828a42d4f4d8b4787f.shtml,official,城镇私营单位从业人员年平均税前工资,verified,2026-10-10
 avg_salary_private,economy,南京,2024,83388.0,元/年,2024南京工资与收入,https://tjj.nanjing.gov.cn/bmfw/njsj/202506/t20250624_5592134.html,official,城镇私营单位就业人员年平均税前工资,verified,2026-10-10
-avg_salary_private,economy,杭州,2024,,元/年,,,official,城镇私营单位就业人员平均工资,pending,
-avg_salary_private,economy,宁波,2024,,元/年,,,official,城镇私营单位就业人员平均工资,pending,
+avg_salary_private,economy,杭州,2024,92054,元/年,杭州统计局2024单位就业人员平均工资公报,https://www.hangzhou.gov.cn/art/2025/6/26/art_1229063404_4365938.html,official,单位就业人员年平均税前工资；非在岗职工口径,verified,2026-10-10
+avg_salary_private,economy,宁波,2024,81595,元/年,宁波统计局2024单位就业人员平均工资公报,https://tjj.ningbo.gov.cn/art/2025/6/30/art_1229042825_58922006.html,official,单位就业人员年平均税前工资；非在岗职工口径,verified,2026-10-10
 avg_salary_private,economy,无锡,2024,81723.0,元/年,无锡统计局2024城镇单位工资,https://tj.wuxi.gov.cn/doc/2025/06/30/4603407.shtml,official,单位就业人员年平均税前工资,verified,2026-10-10
 avg_salary_private,economy,合肥,2024,66223.0,元/年,合肥市政府新闻办公室官方账号：2024工资,https://m.thepaper.cn/newsDetail_forward_31278781,official,单位就业人员年平均税前工资；官方账号原发,verified,2026-10-10
 avg_salary_private,economy,常州,2024,84165.0,元/年,常州统计局2024工资情况,https://tjj.changzhou.gov.cn/html/tjj/2025/OPOEMFCL_0702/28760.html,official,单位就业人员年平均税前工资,verified,2026-10-10
+avg_salary_private,economy,广州,2024,82907,元/年,2024广州单位就业人员工资公报,https://tjj.gz.gov.cn/stats_newtjyw/tjsj/tjgb/qtgb/content/mpost_10330995.html,official,单位就业人员年平均税前工资；非在岗职工口径,verified,2026-10-10
+avg_salary_private,economy,深圳,2024,95217,元/年,2024深圳单位就业人员工资公报,https://tjj.sz.gov.cn/gkmlpt/content/12/12253/mpost_12253352.html,official,单位就业人员年平均税前工资；非在岗职工口径,verified,2026-10-10
 tertiary_industry_ratio,economy,上海,2024,78.2,%,2024上海统计公报,https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html,official,,verified,2026-10-10
 tertiary_industry_ratio,economy,苏州,2024,52.4,%,2024苏州统计公报,https://www.suzhou.gov.cn/szsrmzf/ndgmjjhshfztjsjfb/202506/c413b01f30224b7ba5ddbc1768cabe5c.shtml,official,,verified,2026-10-10
 tertiary_industry_ratio,economy,南京,2024,66.7,%,2024南京统计公报,https://tjj.nanjing.gov.cn/njstjj/202504/t20250401_5108470.html,official,,verified,2026-10-10
@@ -31,22 +37,58 @@ tertiary_industry_ratio,economy,宁波,2024,54.1,%,国家统计局宁波调查�
 tertiary_industry_ratio,economy,无锡,2024,51.7,%,2024无锡统计公报,https://www.wuxi.gov.cn/doc/2025/04/28/4554447.shtml,official,,verified,2026-10-10
 tertiary_industry_ratio,economy,合肥,2024,60.7,%,2024合肥统计公报（瑶海区政府官方镜像）,https://www.hfyaohai.gov.cn/group1/M00/92/B2/wKgEHmhSjH-AakEtABFDSWCfbvA509.pdf,official,采用公报直接发布值；全市口径,verified,2026-10-10
 tertiary_industry_ratio,economy,常州,2024,50.8,%,2024常州统计公报,https://www.changzhou.gov.cn/gi_news/618174366821577,official,,verified,2026-10-10
-house_price,cost,上海,2024,47153.0,元/平方米,安居客上海历史房价,https://www.anjuke.com/fangjia/shanghai/,third_party,原仓库2024年12月二手房挂牌均价；本次未能复核历史页面，保留原值用于暂定演示,pending,
-house_price,cost,苏州,2024,17646.0,元/平方米,安居客苏州历史房价,https://www.anjuke.com/fangjia/suzhou/,third_party,原仓库2024年12月二手房挂牌均价；本次未能复核历史页面，保留原值用于暂定演示,pending,
-house_price,cost,南京,2024,21914.0,元/平方米,安居客南京历史房价,https://www.anjuke.com/fangjia/nanjing/,third_party,原仓库2024年12月二手房挂牌均价；本次未能复核历史页面，保留原值用于暂定演示,pending,
-house_price,cost,杭州,2024,,元/平方米,,,third_party,原仓库2024年12月二手房挂牌均价；本次未能复核历史页面，保留原值用于暂定演示,pending,
-house_price,cost,宁波,2024,,元/平方米,,,third_party,原仓库2024年12月二手房挂牌均价；本次未能复核历史页面，保留原值用于暂定演示,pending,
-house_price,cost,无锡,2024,,元/平方米,,,third_party,原仓库2024年12月二手房挂牌均价；本次未能复核历史页面，保留原值用于暂定演示,pending,
-house_price,cost,合肥,2024,,元/平方米,,,third_party,原仓库2024年12月二手房挂牌均价；本次未能复核历史页面，保留原值用于暂定演示,pending,
-house_price,cost,常州,2024,,元/平方米,,,third_party,原仓库2024年12月二手房挂牌均价；本次未能复核历史页面，保留原值用于暂定演示,pending,
-avg_rent,cost,上海,2024,,元/月,,,third_party,,pending,
-avg_rent,cost,苏州,2024,,元/月,,,third_party,,pending,
-avg_rent,cost,南京,2024,,元/月,,,third_party,,pending,
-avg_rent,cost,杭州,2024,,元/月,,,third_party,,pending,
-avg_rent,cost,宁波,2024,,元/月,,,third_party,,pending,
-avg_rent,cost,无锡,2024,,元/月,,,third_party,,pending,
-avg_rent,cost,合肥,2024,,元/月,,,third_party,,pending,
-avg_rent,cost,常州,2024,,元/月,,,third_party,,pending,
+tertiary_industry_ratio,economy,广州,2024,73.66,%,2024广州统计公报,https://tjj.gz.gov.cn/gkmlpt/content/10/10203/mpost_10203416.html,official,全市口径；直接发布值,verified,2026-10-10
+tertiary_industry_ratio,economy,深圳,2024,62.1,%,2024深圳统计公报,https://tjj.sz.gov.cn/gkmlpt/content/12/12190/mpost_12190509.html,official,全市口径；直接发布值,verified,2026-10-10
+house_price,cost,上海,2024,59939,元/平方米,中国房地产指数系统百城价格指数报告（2024年12月）,https://cihcdnzip.soufunimg.com/backend/reportCreisFile/90924/a55153f1dd68487dbad84a3ab9e02526.pdf,third_party,2024-12；采集日12月25日；官方PDF第7页；市辖区固定样本小区挂牌均值；非实际成交价,verified,2026-10-10
+house_price,cost,苏州,2024,23396,元/平方米,中国房地产指数系统百城价格指数报告（2024年12月）,https://cihcdnzip.soufunimg.com/backend/reportCreisFile/90924/a55153f1dd68487dbad84a3ab9e02526.pdf,third_party,2024-12；采集日12月25日；官方PDF第7页；市辖区固定样本小区挂牌均值；非实际成交价,verified,2026-10-10
+house_price,cost,南京,2024,29989,元/平方米,中国房地产指数系统百城价格指数报告（2024年12月）,https://cihcdnzip.soufunimg.com/backend/reportCreisFile/90924/a55153f1dd68487dbad84a3ab9e02526.pdf,third_party,2024-12；采集日12月25日；官方PDF第7页；市辖区固定样本小区挂牌均值；非实际成交价,verified,2026-10-10
+house_price,cost,杭州,2024,34829,元/平方米,中国房地产指数系统百城价格指数报告（2024年12月）,https://cihcdnzip.soufunimg.com/backend/reportCreisFile/90924/a55153f1dd68487dbad84a3ab9e02526.pdf,third_party,2024-12；采集日12月25日；官方PDF第7页；市辖区固定样本小区挂牌均值；非实际成交价,verified,2026-10-10
+house_price,cost,宁波,2024,22930,元/平方米,中国房地产指数系统百城价格指数报告（2024年12月）,https://cihcdnzip.soufunimg.com/backend/reportCreisFile/90924/a55153f1dd68487dbad84a3ab9e02526.pdf,third_party,2024-12；采集日12月25日；官方PDF第7页；市辖区固定样本小区挂牌均值；非实际成交价,verified,2026-10-10
+house_price,cost,无锡,2024,16084,元/平方米,中国房地产指数系统百城价格指数报告（2024年12月）,https://cihcdnzip.soufunimg.com/backend/reportCreisFile/90924/a55153f1dd68487dbad84a3ab9e02526.pdf,third_party,2024-12；采集日12月25日；官方PDF第7页；市辖区固定样本小区挂牌均值；非实际成交价,verified,2026-10-10
+house_price,cost,合肥,2024,17656,元/平方米,中国房地产指数系统百城价格指数报告（2024年12月）,https://cihcdnzip.soufunimg.com/backend/reportCreisFile/90924/a55153f1dd68487dbad84a3ab9e02526.pdf,third_party,2024-12；采集日12月25日；官方PDF第7页；市辖区固定样本小区挂牌均值；非实际成交价,verified,2026-10-10
+house_price,cost,常州,2024,13267,元/平方米,中国房地产指数系统百城价格指数报告（2024年12月）,https://cihcdnzip.soufunimg.com/backend/reportCreisFile/90924/a55153f1dd68487dbad84a3ab9e02526.pdf,third_party,2024-12；采集日12月25日；官方PDF第7页；市辖区固定样本小区挂牌均值；非实际成交价,verified,2026-10-10
+house_price,cost,广州,2024,36888,元/平方米,中国房地产指数系统百城价格指数报告（2024年12月）,https://cihcdnzip.soufunimg.com/backend/reportCreisFile/90924/a55153f1dd68487dbad84a3ab9e02526.pdf,third_party,2024-12；采集日12月25日；官方PDF第7页；市辖区固定样本小区挂牌均值；非实际成交价,verified,2026-10-10
+house_price,cost,深圳,2024,67762,元/平方米,中国房地产指数系统百城价格指数报告（2024年12月）,https://cihcdnzip.soufunimg.com/backend/reportCreisFile/90924/a55153f1dd68487dbad84a3ab9e02526.pdf,third_party,2024-12；采集日12月25日；官方PDF第7页；市辖区固定样本小区挂牌均值；非实际成交价,verified,2026-10-10
+rent_per_sqm,cost,上海,2024,83.1,元/平方米/月,中国房地产指数系统百城价格指数报告（2024年12月）,https://cihcdnzip.soufunimg.com/backend/reportCreisFile/90924/a55153f1dd68487dbad84a3ab9e02526.pdf,third_party,2024-12；采集日12月25日；官方PDF第9页；市辖区固定样本小区挂牌均值；非实际成交价,verified,2026-10-10
+rent_per_sqm,cost,苏州,2024,34.8,元/平方米/月,中国房地产指数系统百城价格指数报告（2024年12月）,https://cihcdnzip.soufunimg.com/backend/reportCreisFile/90924/a55153f1dd68487dbad84a3ab9e02526.pdf,third_party,2024-12；采集日12月25日；官方PDF第9页；市辖区固定样本小区挂牌均值；非实际成交价,verified,2026-10-10
+rent_per_sqm,cost,南京,2024,39.0,元/平方米/月,中国房地产指数系统百城价格指数报告（2024年12月）,https://cihcdnzip.soufunimg.com/backend/reportCreisFile/90924/a55153f1dd68487dbad84a3ab9e02526.pdf,third_party,2024-12；采集日12月25日；官方PDF第9页；市辖区固定样本小区挂牌均值；非实际成交价,verified,2026-10-10
+rent_per_sqm,cost,杭州,2024,51.6,元/平方米/月,中国房地产指数系统百城价格指数报告（2024年12月）,https://cihcdnzip.soufunimg.com/backend/reportCreisFile/90924/a55153f1dd68487dbad84a3ab9e02526.pdf,third_party,2024-12；采集日12月25日；官方PDF第9页；市辖区固定样本小区挂牌均值；非实际成交价,verified,2026-10-10
+rent_per_sqm,cost,宁波,2024,32.8,元/平方米/月,中国房地产指数系统百城价格指数报告（2024年12月）,https://cihcdnzip.soufunimg.com/backend/reportCreisFile/90924/a55153f1dd68487dbad84a3ab9e02526.pdf,third_party,2024-12；采集日12月25日；官方PDF第9页；市辖区固定样本小区挂牌均值；非实际成交价,verified,2026-10-10
+rent_per_sqm,cost,无锡,2024,26.4,元/平方米/月,中国房地产指数系统百城价格指数报告（2024年12月）,https://cihcdnzip.soufunimg.com/backend/reportCreisFile/90924/a55153f1dd68487dbad84a3ab9e02526.pdf,third_party,2024-12；采集日12月25日；官方PDF第9页；市辖区固定样本小区挂牌均值；非实际成交价,verified,2026-10-10
+rent_per_sqm,cost,合肥,2024,26.7,元/平方米/月,中国房地产指数系统百城价格指数报告（2024年12月）,https://cihcdnzip.soufunimg.com/backend/reportCreisFile/90924/a55153f1dd68487dbad84a3ab9e02526.pdf,third_party,2024-12；采集日12月25日；官方PDF第9页；市辖区固定样本小区挂牌均值；非实际成交价,verified,2026-10-10
+rent_per_sqm,cost,常州,2024,23.6,元/平方米/月,中国房地产指数系统百城价格指数报告（2024年12月）,https://cihcdnzip.soufunimg.com/backend/reportCreisFile/90924/a55153f1dd68487dbad84a3ab9e02526.pdf,third_party,2024-12；采集日12月25日；官方PDF第9页；市辖区固定样本小区挂牌均值；非实际成交价,verified,2026-10-10
+rent_per_sqm,cost,广州,2024,49.5,元/平方米/月,中国房地产指数系统百城价格指数报告（2024年12月）,https://cihcdnzip.soufunimg.com/backend/reportCreisFile/90924/a55153f1dd68487dbad84a3ab9e02526.pdf,third_party,2024-12；采集日12月25日；官方PDF第9页；市辖区固定样本小区挂牌均值；非实际成交价,verified,2026-10-10
+rent_per_sqm,cost,深圳,2024,83.4,元/平方米/月,中国房地产指数系统百城价格指数报告（2024年12月）,https://cihcdnzip.soufunimg.com/backend/reportCreisFile/90924/a55153f1dd68487dbad84a3ab9e02526.pdf,third_party,2024-12；采集日12月25日；官方PDF第9页；市辖区固定样本小区挂牌均值；非实际成交价,verified,2026-10-10
+hospital_count,public_service,上海,2024,503.0,个,2024上海统计公报,https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html,official,,verified,2026-10-10
+hospital_count,public_service,苏州,2024,282.0,个,2024苏州统计公报,https://www.suzhou.gov.cn/szsrmzf/ndgmjjhshfztjsjfb/202506/c413b01f30224b7ba5ddbc1768cabe5c.shtml,official,,verified,2026-10-10
+hospital_count,public_service,南京,2024,315.0,个,2024南京各类卫生机构统计表,https://wjw.nanjing.gov.cn/njswshjhsywyh/202507/t20250718_5610778.html,official,医院总数315；不使用统计公报医院+社区中心+卫生院446合计,verified,2026-10-10
+hospital_count,public_service,杭州,2024,417,个,浙江统计年鉴2025 表17-22,https://zjjcmspublicnew.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/cms_files/jcms1/web3077/site/flash/tjj/Reports1/2025%E6%B5%99%E6%B1%9F%E7%BB%9F%E8%AE%A1%E5%B9%B4%E9%89%B4/cn/html/17-22%20%E5%90%84%E5%B8%82%E6%96%87%E5%8C%96%E5%92%8C%E5%8D%AB%E7%94%9F%E4%BA%8B%E4%B8%9A%E4%B8%BB%E8%A6%81%E6%8C%87%E6%A0%87%EF%BC%882024%E5%B9%B4%EF%BC%89.html,official,2024年医院数独立列；不含另列妇幼保健机构；宁波公报225含妇保院，不混用,verified,2026-10-10
+hospital_count,public_service,宁波,2024,214,个,浙江统计年鉴2025 表17-22,https://zjjcmspublicnew.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/cms_files/jcms1/web3077/site/flash/tjj/Reports1/2025%E6%B5%99%E6%B1%9F%E7%BB%9F%E8%AE%A1%E5%B9%B4%E9%89%B4/cn/html/17-22%20%E5%90%84%E5%B8%82%E6%96%87%E5%8C%96%E5%92%8C%E5%8D%AB%E7%94%9F%E4%BA%8B%E4%B8%9A%E4%B8%BB%E8%A6%81%E6%8C%87%E6%A0%87%EF%BC%882024%E5%B9%B4%EF%BC%89.html,official,2024年医院数独立列；不含另列妇幼保健机构；宁波公报225含妇保院，不混用,verified,2026-10-10
+hospital_count,public_service,无锡,2024,220,个,无锡卫健委2024卫生健康事业发展统计公报,https://wjw.wuxi.gov.cn/doc/2025/07/30/4621003.shtml,official,2024年医院合计；不含另列卫生院、社区中心、妇幼保健机构,verified,2026-10-10
+hospital_count,public_service,合肥,2024,231.0,个,2024合肥统计公报（瑶海区政府官方镜像）,https://www.hfyaohai.gov.cn/group1/M00/92/B2/wKgEHmhSjH-AakEtABFDSWCfbvA509.pdf,official,采用公报直接发布值；全市口径,verified,2026-10-10
+hospital_count,public_service,常州,2024,105,个,江苏统计年鉴2025 表16-16,https://tj.jiangsu.gov.cn/2025/nj16/nj1616.htm,official,2024年医院合计；不含另列卫生院、社区中心、妇幼保健机构,verified,2026-10-10
+hospital_count,public_service,广州,2024,336,个,2024广州统计公报,https://tjj.gz.gov.cn/gkmlpt/content/10/10203/mpost_10203416.html,official,2024年医院合计；不含另列卫生院、社区中心、妇幼保健机构,verified,2026-10-10
+hospital_count,public_service,深圳,2024,162,个,2024深圳统计公报,https://tjj.sz.gov.cn/gkmlpt/content/12/12190/mpost_12190509.html,official,2024年医院合计；不含另列卫生院、社区中心、妇幼保健机构,verified,2026-10-10
+university_count,public_service,上海,2024,69,所,教育部2024全国普通高等学校名单,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202406/W020240621412769813275.xls,official,截至2024-06-20；按所在地聚合；排除成人高校；381所十城明细保存在data/reference；年中口径,verified,2026-10-10
+university_count,public_service,苏州,2024,25,所,教育部2024全国普通高等学校名单,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202406/W020240621412769813275.xls,official,截至2024-06-20；按所在地聚合；排除成人高校；381所十城明细保存在data/reference；年中口径,verified,2026-10-10
+university_count,public_service,南京,2024,52,所,教育部2024全国普通高等学校名单,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202406/W020240621412769813275.xls,official,截至2024-06-20；按所在地聚合；排除成人高校；381所十城明细保存在data/reference；年中口径,verified,2026-10-10
+university_count,public_service,杭州,2024,47,所,教育部2024全国普通高等学校名单,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202406/W020240621412769813275.xls,official,截至2024-06-20；按所在地聚合；排除成人高校；381所十城明细保存在data/reference；年中口径,verified,2026-10-10
+university_count,public_service,宁波,2024,14,所,教育部2024全国普通高等学校名单,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202406/W020240621412769813275.xls,official,截至2024-06-20；按所在地聚合；排除成人高校；381所十城明细保存在data/reference；年中口径,verified,2026-10-10
+university_count,public_service,无锡,2024,14,所,教育部2024全国普通高等学校名单,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202406/W020240621412769813275.xls,official,截至2024-06-20；按所在地聚合；排除成人高校；381所十城明细保存在data/reference；年中口径,verified,2026-10-10
+university_count,public_service,合肥,2024,55,所,教育部2024全国普通高等学校名单,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202406/W020240621412769813275.xls,official,截至2024-06-20；按所在地聚合；排除成人高校；381所十城明细保存在data/reference；年中口径,verified,2026-10-10
+university_count,public_service,常州,2024,11,所,教育部2024全国普通高等学校名单,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202406/W020240621412769813275.xls,official,截至2024-06-20；按所在地聚合；排除成人高校；381所十城明细保存在data/reference；年中口径,verified,2026-10-10
+university_count,public_service,广州,2024,84,所,教育部2024全国普通高等学校名单,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202406/W020240621412769813275.xls,official,截至2024-06-20；按所在地聚合；排除成人高校；381所十城明细保存在data/reference；年中口径,verified,2026-10-10
+university_count,public_service,深圳,2024,10,所,教育部2024全国普通高等学校名单,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202406/W020240621412769813275.xls,official,截至2024-06-20；按所在地聚合；排除成人高校；381所十城明细保存在data/reference；年中口径,verified,2026-10-10
+rail_station_count,public_service,上海,2024,485,个,中国城市轨道交通协会2024年度统计和分析报告 表2,https://infosharingp2-oss.camet.org.cn/resources/manual/2025/07/25/701542926557253.pdf,official,2024年底已投运全部城轨制式；换乘站去重；含有轨电车及市域等；定义PDF第12页，表2第16—19页,verified,2026-10-10
+rail_station_count,public_service,苏州,2024,262,个,中国城市轨道交通协会2024年度统计和分析报告 表2,https://infosharingp2-oss.camet.org.cn/resources/manual/2025/07/25/701542926557253.pdf,official,2024年底已投运全部城轨制式；换乘站去重；含有轨电车及市域等；定义PDF第12页，表2第16—19页,verified,2026-10-10
+rail_station_count,public_service,南京,2024,228,个,中国城市轨道交通协会2024年度统计和分析报告 表2,https://infosharingp2-oss.camet.org.cn/resources/manual/2025/07/25/701542926557253.pdf,official,2024年底已投运全部城轨制式；换乘站去重；含有轨电车及市域等；定义PDF第12页，表2第16—19页,verified,2026-10-10
+rail_station_count,public_service,杭州,2024,256,个,中国城市轨道交通协会2024年度统计和分析报告 表2,https://infosharingp2-oss.camet.org.cn/resources/manual/2025/07/25/701542926557253.pdf,official,2024年底已投运全部城轨制式；换乘站去重；含有轨电车及市域等；定义PDF第12页，表2第16—19页,verified,2026-10-10
+rail_station_count,public_service,宁波,2024,121,个,中国城市轨道交通协会2024年度统计和分析报告 表2,https://infosharingp2-oss.camet.org.cn/resources/manual/2025/07/25/701542926557253.pdf,official,2024年底已投运全部城轨制式；换乘站去重；含有轨电车及市域等；定义PDF第12页，表2第16—19页,verified,2026-10-10
+rail_station_count,public_service,无锡,2024,89,个,中国城市轨道交通协会2024年度统计和分析报告 表2,https://infosharingp2-oss.camet.org.cn/resources/manual/2025/07/25/701542926557253.pdf,official,2024年底已投运全部城轨制式；换乘站去重；含有轨电车及市域等；定义PDF第12页，表2第16—19页,verified,2026-10-10
+rail_station_count,public_service,合肥,2024,171,个,中国城市轨道交通协会2024年度统计和分析报告 表2,https://infosharingp2-oss.camet.org.cn/resources/manual/2025/07/25/701542926557253.pdf,official,2024年底已投运全部城轨制式；换乘站去重；含有轨电车及市域等；定义PDF第12页，表2第16—19页,verified,2026-10-10
+rail_station_count,public_service,常州,2024,43,个,中国城市轨道交通协会2024年度统计和分析报告 表2,https://infosharingp2-oss.camet.org.cn/resources/manual/2025/07/25/701542926557253.pdf,official,2024年底已投运全部城轨制式；换乘站去重；含有轨电车及市域等；定义PDF第12页，表2第16—19页,verified,2026-10-10
+rail_station_count,public_service,广州,2024,301,个,中国城市轨道交通协会2024年度统计和分析报告 表2,https://infosharingp2-oss.camet.org.cn/resources/manual/2025/07/25/701542926557253.pdf,official,2024年底已投运全部城轨制式；换乘站去重；含有轨电车及市域等；定义PDF第12页，表2第16—19页,verified,2026-10-10
+rail_station_count,public_service,深圳,2024,352,个,中国城市轨道交通协会2024年度统计和分析报告 表2,https://infosharingp2-oss.camet.org.cn/resources/manual/2025/07/25/701542926557253.pdf,official,2024年底已投运全部城轨制式；换乘站去重；含有轨电车及市域等；定义PDF第12页，表2第16—19页,verified,2026-10-10
 pm25,environment,上海,2024,28.0,μg/m³,2024上海生态环境状况公报,https://sthj.sh.gov.cn/hbzhywpt1143/hbzhywpt1144/20250603/6117725c9b5747e48d2eaab33c48ae8d.html,official,采用生态公报发布精度；全市国控监测口径,verified,2026-10-10
 pm25,environment,苏州,2024,29.0,μg/m³,2024苏州统计公报,https://www.suzhou.gov.cn/szsrmzf/ndgmjjhshfztjsjfb/202506/c413b01f30224b7ba5ddbc1768cabe5c.shtml,official,市区监测口径,verified,2026-10-10
 pm25,environment,南京,2024,28.3,μg/m³,2024南京生态环境状况公报,https://sthjj.nanjing.gov.cn/njshjbhj/202503/P020250306629663777825.pdf,official,生态公报28.3；统计公报整数28为不同发布精度,verified,2026-10-10
@@ -55,6 +97,8 @@ pm25,environment,宁波,2024,23.4,μg/m³,国家统计局宁波调查队：2024�
 pm25,environment,无锡,2024,27.0,μg/m³,无锡政府2024生态公报解读,https://www.wuxi.gov.cn/doc/2025/06/05/4586367.shtml,official,城市空气监测口径,verified,2026-10-10
 pm25,environment,合肥,2024,33.7,μg/m³,2024合肥统计公报（瑶海区政府官方镜像）,https://www.hfyaohai.gov.cn/group1/M00/92/B2/wKgEHmhSjH-AakEtABFDSWCfbvA509.pdf,official,采用公报直接发布值；全市口径,verified,2026-10-10
 pm25,environment,常州,2024,33.0,μg/m³,2024常州统计公报,https://www.changzhou.gov.cn/gi_news/618174366821577,official,,verified,2026-10-10
+pm25,environment,广州,2024,21,μg/m³,2024广州生态环境状况公报,https://sthjj.gz.gov.cn/attachment/7/7826/7826916/10298026.pdf,official,广州生态公报PDF第4页；全市监测,verified,2026-10-10
+pm25,environment,深圳,2024,17.3,μg/m³,2024深圳统计公报,https://tjj.sz.gov.cn/gkmlpt/content/12/12190/mpost_12190509.html,official,深圳统计公报一位小数17.3；生态公报整数17,verified,2026-10-10
 good_air_days_ratio,environment,上海,2024,88.5,%,2024上海生态环境状况公报,https://sthj.sh.gov.cn/hbzhywpt1143/hbzhywpt1144/20250603/6117725c9b5747e48d2eaab33c48ae8d.html,official,采用生态公报发布精度；全市国控监测口径,verified,2026-10-10
 good_air_days_ratio,environment,苏州,2024,84.2,%,2024苏州统计公报,https://www.suzhou.gov.cn/szsrmzf/ndgmjjhshfztjsjfb/202506/c413b01f30224b7ba5ddbc1768cabe5c.shtml,official,市区监测口径,verified,2026-10-10
 good_air_days_ratio,environment,南京,2024,85.8,%,2024南京统计公报,https://tjj.nanjing.gov.cn/njstjj/202504/t20250401_5108470.html,official,314个优良天，占366天85.8%,verified,2026-10-10
@@ -63,35 +107,15 @@ good_air_days_ratio,environment,宁波,2024,91.3,%,国家统计局宁波调查�
 good_air_days_ratio,environment,无锡,2024,83.9,%,无锡政府2024生态公报解读,https://www.wuxi.gov.cn/doc/2025/06/05/4586367.shtml,official,城市空气监测口径,verified,2026-10-10
 good_air_days_ratio,environment,合肥,2024,86.1,%,2024合肥统计公报（瑶海区政府官方镜像）,https://www.hfyaohai.gov.cn/group1/M00/92/B2/wKgEHmhSjH-AakEtABFDSWCfbvA509.pdf,official,采用公报直接发布值；全市口径,verified,2026-10-10
 good_air_days_ratio,environment,常州,2024,79.8,%,2024常州统计公报,https://www.changzhou.gov.cn/gi_news/618174366821577,official,,verified,2026-10-10
-hospital_count,public_service,上海,2024,503.0,个,2024上海统计公报,https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html,official,,verified,2026-10-10
-hospital_count,public_service,苏州,2024,282.0,个,2024苏州统计公报,https://www.suzhou.gov.cn/szsrmzf/ndgmjjhshfztjsjfb/202506/c413b01f30224b7ba5ddbc1768cabe5c.shtml,official,,verified,2026-10-10
-hospital_count,public_service,南京,2024,315.0,个,2024南京各类卫生机构统计表,https://wjw.nanjing.gov.cn/njswshjhsywyh/202507/t20250718_5610778.html,official,医院总数315；不使用统计公报医院+社区中心+卫生院446合计,verified,2026-10-10
-hospital_count,public_service,杭州,2024,417.0,个,2025杭州概览附录,https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web149/site/attach/0/2ee3277b2f834c208a1f130966e48bea.pdf,official,2024年列；印刷页132；医院从7280医疗卫生机构中单列,verified,2026-10-10
-hospital_count,public_service,宁波,2024,,个,国家统计局宁波调查队：2024统计公报,https://zjzd.stats.gov.cn/gjtjjnbdcd/dcfb/art/2025/art_55a7f3728c094536a389fd794bf51c51.html,official,原公报225含妇保院；与其他城市医院分类不同，暂不纳入，待统一口径,pending,
-hospital_count,public_service,无锡,2024,,个,,,official,公报55仅综合医院，不作为全部医院总数,pending,
-hospital_count,public_service,合肥,2024,231.0,个,2024合肥统计公报（瑶海区政府官方镜像）,https://www.hfyaohai.gov.cn/group1/M00/92/B2/wKgEHmhSjH-AakEtABFDSWCfbvA509.pdf,official,采用公报直接发布值；全市口径,verified,2026-10-10
-hospital_count,public_service,常州,2024,,个,,,official,公报157为医院+卫生院合计，暂不纳入医院总数,pending,
-university_count,public_service,上海,2024,69.0,所,教育部2024全国普通高等学校名单,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202406/W020240621412769813275.xls,official,截至2024-06-20；按所在地聚合；排除成人高校；287所八城子集保存在data/reference；年中口径而非年末存量,verified,2026-10-10
-university_count,public_service,苏州,2024,25.0,所,教育部2024全国普通高等学校名单,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202406/W020240621412769813275.xls,official,截至2024-06-20；按所在地聚合；排除成人高校；287所八城子集保存在data/reference；年中口径而非年末存量,verified,2026-10-10
-university_count,public_service,南京,2024,52.0,所,教育部2024全国普通高等学校名单,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202406/W020240621412769813275.xls,official,截至2024-06-20；按所在地聚合；排除成人高校；287所八城子集保存在data/reference；年中口径而非年末存量,verified,2026-10-10
-university_count,public_service,杭州,2024,47.0,所,教育部2024全国普通高等学校名单,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202406/W020240621412769813275.xls,official,截至2024-06-20；按所在地聚合；排除成人高校；287所八城子集保存在data/reference；年中口径而非年末存量,verified,2026-10-10
-university_count,public_service,宁波,2024,14.0,所,教育部2024全国普通高等学校名单,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202406/W020240621412769813275.xls,official,截至2024-06-20；按所在地聚合；排除成人高校；287所八城子集保存在data/reference；年中口径而非年末存量,verified,2026-10-10
-university_count,public_service,无锡,2024,14.0,所,教育部2024全国普通高等学校名单,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202406/W020240621412769813275.xls,official,截至2024-06-20；按所在地聚合；排除成人高校；287所八城子集保存在data/reference；年中口径而非年末存量,verified,2026-10-10
-university_count,public_service,合肥,2024,55.0,所,教育部2024全国普通高等学校名单,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202406/W020240621412769813275.xls,official,截至2024-06-20；按所在地聚合；排除成人高校；287所八城子集保存在data/reference；年中口径而非年末存量,verified,2026-10-10
-university_count,public_service,常州,2024,11.0,所,教育部2024全国普通高等学校名单,https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202406/W020240621412769813275.xls,official,截至2024-06-20；按所在地聚合；排除成人高校；287所八城子集保存在data/reference；年中口径而非年末存量,verified,2026-10-10
-metro_station_count,public_service,上海,2024,,个,,,official,待补充统一口径的存量数据,pending,
-park_count,environment,上海,2024,,个,,,official,待补充统一口径的存量数据,pending,
-metro_station_count,public_service,苏州,2024,,个,,,official,待补充统一口径的存量数据,pending,
-park_count,environment,苏州,2024,,个,,,official,待补充统一口径的存量数据,pending,
-metro_station_count,public_service,南京,2024,,个,,,official,待补充统一口径的存量数据,pending,
-park_count,environment,南京,2024,,个,,,official,待补充统一口径的存量数据,pending,
-metro_station_count,public_service,杭州,2024,,个,,,official,待补充统一口径的存量数据,pending,
-park_count,environment,杭州,2024,,个,,,official,待补充统一口径的存量数据,pending,
-metro_station_count,public_service,宁波,2024,,个,,,official,待补充统一口径的存量数据,pending,
-park_count,environment,宁波,2024,,个,,,official,待补充统一口径的存量数据,pending,
-metro_station_count,public_service,无锡,2024,,个,,,official,待补充统一口径的存量数据,pending,
-park_count,environment,无锡,2024,,个,,,official,待补充统一口径的存量数据,pending,
-metro_station_count,public_service,合肥,2024,,个,,,official,待补充统一口径的存量数据,pending,
-park_count,environment,合肥,2024,,个,,,official,待补充统一口径的存量数据,pending,
-metro_station_count,public_service,常州,2024,,个,,,official,待补充统一口径的存量数据,pending,
-park_count,environment,常州,2024,,个,,,official,待补充统一口径的存量数据,pending,
+good_air_days_ratio,environment,广州,2024,94.0,%,2024广州生态环境状况公报,https://sthjj.gz.gov.cn/attachment/7/7826/7826916/10298026.pdf,official,广州生态公报PDF第4页；全市监测,verified,2026-10-10
+good_air_days_ratio,environment,深圳,2024,97.0,%,2024深圳统计公报,https://tjj.sz.gov.cn/gkmlpt/content/12/12190/mpost_12190509.html,official,全市口径；直接发布值,verified,2026-10-10
+park_count,environment,上海,2024,512,个,住建部2024城市建设统计年鉴 表11-2,https://www.mohurd.gov.cn/api-gateway/jpaas-web-server/front/document/download?fileUrl=YW5UzzlvCwcM%2FNHHX%2FtT6BJ6yM%2FAU1LVtmOVIvNjcurVPnfFDxP8cZxRbQqO92i3diwBWrERL383xPMkZe7OsW%2Fqd%2FW83d4syOqurd7EptpV9YdOLHoNNa4yMomh%2BPOWVwKZjKJk9S7bv3mTtwqG%2BfZ4qNe6n%2BafOJG0eCqG1PQ%3D&fileName=2024%E5%B9%B4%E5%9F%8E%E5%B8%82%E5%BB%BA%E8%AE%BE%E7%BB%9F%E8%AE%A1%E5%B9%B4%E9%89%B4.xls,official,2024年城市园林绿化；表11-2 G182；城市建设统计口径，非全市城乡/口袋公园宣传口径,verified,2026-10-10
+park_count,environment,苏州,2024,175,个,住建部2024城市建设统计年鉴 表11-2,https://www.mohurd.gov.cn/api-gateway/jpaas-web-server/front/document/download?fileUrl=YW5UzzlvCwcM%2FNHHX%2FtT6BJ6yM%2FAU1LVtmOVIvNjcurVPnfFDxP8cZxRbQqO92i3diwBWrERL383xPMkZe7OsW%2Fqd%2FW83d4syOqurd7EptpV9YdOLHoNNa4yMomh%2BPOWVwKZjKJk9S7bv3mTtwqG%2BfZ4qNe6n%2BafOJG0eCqG1PQ%3D&fileName=2024%E5%B9%B4%E5%9F%8E%E5%B8%82%E5%BB%BA%E8%AE%BE%E7%BB%9F%E8%AE%A1%E5%B9%B4%E9%89%B4.xls,official,2024年城市园林绿化；表11-2 G193；城市建设统计口径，非全市城乡/口袋公园宣传口径,verified,2026-10-10
+park_count,environment,南京,2024,182,个,住建部2024城市建设统计年鉴 表11-2,https://www.mohurd.gov.cn/api-gateway/jpaas-web-server/front/document/download?fileUrl=YW5UzzlvCwcM%2FNHHX%2FtT6BJ6yM%2FAU1LVtmOVIvNjcurVPnfFDxP8cZxRbQqO92i3diwBWrERL383xPMkZe7OsW%2Fqd%2FW83d4syOqurd7EptpV9YdOLHoNNa4yMomh%2BPOWVwKZjKJk9S7bv3mTtwqG%2BfZ4qNe6n%2BafOJG0eCqG1PQ%3D&fileName=2024%E5%B9%B4%E5%9F%8E%E5%B8%82%E5%BB%BA%E8%AE%BE%E7%BB%9F%E8%AE%A1%E5%B9%B4%E9%89%B4.xls,official,2024年城市园林绿化；表11-2 G184；城市建设统计口径，非全市城乡/口袋公园宣传口径,verified,2026-10-10
+park_count,environment,杭州,2024,476,个,住建部2024城市建设统计年鉴 表11-2,https://www.mohurd.gov.cn/api-gateway/jpaas-web-server/front/document/download?fileUrl=YW5UzzlvCwcM%2FNHHX%2FtT6BJ6yM%2FAU1LVtmOVIvNjcurVPnfFDxP8cZxRbQqO92i3diwBWrERL383xPMkZe7OsW%2Fqd%2FW83d4syOqurd7EptpV9YdOLHoNNa4yMomh%2BPOWVwKZjKJk9S7bv3mTtwqG%2BfZ4qNe6n%2BafOJG0eCqG1PQ%3D&fileName=2024%E5%B9%B4%E5%9F%8E%E5%B8%82%E5%BB%BA%E8%AE%BE%E7%BB%9F%E8%AE%A1%E5%B9%B4%E9%89%B4.xls,official,2024年城市园林绿化；表11-2 G219；城市建设统计口径，非全市城乡/口袋公园宣传口径,verified,2026-10-10
+park_count,environment,宁波,2024,219,个,住建部2024城市建设统计年鉴 表11-2,https://www.mohurd.gov.cn/api-gateway/jpaas-web-server/front/document/download?fileUrl=YW5UzzlvCwcM%2FNHHX%2FtT6BJ6yM%2FAU1LVtmOVIvNjcurVPnfFDxP8cZxRbQqO92i3diwBWrERL383xPMkZe7OsW%2Fqd%2FW83d4syOqurd7EptpV9YdOLHoNNa4yMomh%2BPOWVwKZjKJk9S7bv3mTtwqG%2BfZ4qNe6n%2BafOJG0eCqG1PQ%3D&fileName=2024%E5%B9%B4%E5%9F%8E%E5%B8%82%E5%BB%BA%E8%AE%BE%E7%BB%9F%E8%AE%A1%E5%B9%B4%E9%89%B4.xls,official,2024年城市园林绿化；表11-2 G221；城市建设统计口径，非全市城乡/口袋公园宣传口径,verified,2026-10-10
+park_count,environment,无锡,2024,81,个,住建部2024城市建设统计年鉴 表11-2,https://www.mohurd.gov.cn/api-gateway/jpaas-web-server/front/document/download?fileUrl=YW5UzzlvCwcM%2FNHHX%2FtT6BJ6yM%2FAU1LVtmOVIvNjcurVPnfFDxP8cZxRbQqO92i3diwBWrERL383xPMkZe7OsW%2Fqd%2FW83d4syOqurd7EptpV9YdOLHoNNa4yMomh%2BPOWVwKZjKJk9S7bv3mTtwqG%2BfZ4qNe6n%2BafOJG0eCqG1PQ%3D&fileName=2024%E5%B9%B4%E5%9F%8E%E5%B8%82%E5%BB%BA%E8%AE%BE%E7%BB%9F%E8%AE%A1%E5%B9%B4%E9%89%B4.xls,official,2024年城市园林绿化；表11-2 G185；城市建设统计口径，非全市城乡/口袋公园宣传口径,verified,2026-10-10
+park_count,environment,合肥,2024,302,个,住建部2024城市建设统计年鉴 表11-2,https://www.mohurd.gov.cn/api-gateway/jpaas-web-server/front/document/download?fileUrl=YW5UzzlvCwcM%2FNHHX%2FtT6BJ6yM%2FAU1LVtmOVIvNjcurVPnfFDxP8cZxRbQqO92i3diwBWrERL383xPMkZe7OsW%2Fqd%2FW83d4syOqurd7EptpV9YdOLHoNNa4yMomh%2BPOWVwKZjKJk9S7bv3mTtwqG%2BfZ4qNe6n%2BafOJG0eCqG1PQ%3D&fileName=2024%E5%B9%B4%E5%9F%8E%E5%B8%82%E5%BB%BA%E8%AE%BE%E7%BB%9F%E8%AE%A1%E5%B9%B4%E9%89%B4.xls,official,2024年城市园林绿化；表11-2 G251；城市建设统计口径，非全市城乡/口袋公园宣传口径,verified,2026-10-10
+park_count,environment,常州,2024,47,个,住建部2024城市建设统计年鉴 表11-2,https://www.mohurd.gov.cn/api-gateway/jpaas-web-server/front/document/download?fileUrl=YW5UzzlvCwcM%2FNHHX%2FtT6BJ6yM%2FAU1LVtmOVIvNjcurVPnfFDxP8cZxRbQqO92i3diwBWrERL383xPMkZe7OsW%2Fqd%2FW83d4syOqurd7EptpV9YdOLHoNNa4yMomh%2BPOWVwKZjKJk9S7bv3mTtwqG%2BfZ4qNe6n%2BafOJG0eCqG1PQ%3D&fileName=2024%E5%B9%B4%E5%9F%8E%E5%B8%82%E5%BB%BA%E8%AE%BE%E7%BB%9F%E8%AE%A1%E5%B9%B4%E9%89%B4.xls,official,2024年城市园林绿化；表11-2 G191；城市建设统计口径，非全市城乡/口袋公园宣传口径,verified,2026-10-10
+park_count,environment,广州,2024,678,个,住建部2024城市建设统计年鉴 表11-2,https://www.mohurd.gov.cn/api-gateway/jpaas-web-server/front/document/download?fileUrl=YW5UzzlvCwcM%2FNHHX%2FtT6BJ6yM%2FAU1LVtmOVIvNjcurVPnfFDxP8cZxRbQqO92i3diwBWrERL383xPMkZe7OsW%2Fqd%2FW83d4syOqurd7EptpV9YdOLHoNNa4yMomh%2BPOWVwKZjKJk9S7bv3mTtwqG%2BfZ4qNe6n%2BafOJG0eCqG1PQ%3D&fileName=2024%E5%B9%B4%E5%9F%8E%E5%B8%82%E5%BB%BA%E8%AE%BE%E7%BB%9F%E8%AE%A1%E5%B9%B4%E9%89%B4.xls,official,2024年城市园林绿化；表11-2 G477；城市建设统计口径，非全市城乡/口袋公园宣传口径,verified,2026-10-10
+park_count,environment,深圳,2024,1343,个,住建部2024城市建设统计年鉴 表11-2,https://www.mohurd.gov.cn/api-gateway/jpaas-web-server/front/document/download?fileUrl=YW5UzzlvCwcM%2FNHHX%2FtT6BJ6yM%2FAU1LVtmOVIvNjcurVPnfFDxP8cZxRbQqO92i3diwBWrERL383xPMkZe7OsW%2Fqd%2FW83d4syOqurd7EptpV9YdOLHoNNa4yMomh%2BPOWVwKZjKJk9S7bv3mTtwqG%2BfZ4qNe6n%2BafOJG0eCqG1PQ%3D&fileName=2024%E5%B9%B4%E5%9F%8E%E5%B8%82%E5%BB%BA%E8%AE%BE%E7%BB%9F%E8%AE%A1%E5%B9%B4%E9%89%B4.xls,official,2024年城市园林绿化；表11-2 G484；城市建设统计口径，非全市城乡/口袋公园宣传口径,verified,2026-10-10

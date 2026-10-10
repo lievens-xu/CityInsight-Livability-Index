@@ -24,7 +24,7 @@ def main():
     for pattern in ('01_total_score_ranking*.png', '02_dimension_scores*.png', '03_radar_*.png'):
         for path in OUTPUT_DIR.glob(pattern):
             path.unlink()
-    english = {1: 'Shanghai', 2: 'Suzhou', 3: 'Nanjing', 4: 'Hangzhou', 5: 'Ningbo', 6: 'Wuxi', 7: 'Hefei', 8: 'Changzhou'}
+    english = {1: 'Shanghai', 2: 'Suzhou', 3: 'Nanjing', 4: 'Hangzhou', 5: 'Ningbo', 6: 'Wuxi', 7: 'Hefei', 8: 'Changzhou', 9: 'Guangzhou', 10: 'Shenzhen'}
     labels = ['经济机会', '生活成本', '公共服务', '环境质量'] if chinese else ['Economy', 'Affordability', 'Services', 'Environment']
     for year, rows in df.groupby('year'):
         names = rows.city_name if chinese else rows.city_id.map(english)

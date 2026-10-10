@@ -7,8 +7,8 @@ import pandas as pd
 BASE_DIR = Path(__file__).resolve().parents[1]
 DIMENSIONS = {
     "economy": ["gdp_per_capita", "avg_salary_non_private", "avg_salary_private", "tertiary_industry_ratio"],
-    "cost": ["house_price", "avg_rent", "house_price_income_ratio_non_private", "house_price_income_ratio_private"],
-    "service": ["hospital_count", "university_count", "metro_station_count"],
+    "cost": ["house_price", "rent_per_sqm", "house_price_income_ratio_non_private", "house_price_income_ratio_private"],
+    "service": ["hospital_count", "university_count", "rail_station_count"],
     "environment": ["pm25", "good_air_days_ratio", "park_count"],
 }
 WEIGHTS = {"economy": 0.35, "cost": 0.30, "service": 0.20, "environment": 0.15}
@@ -17,7 +17,7 @@ DERIVED = ["house_price_income_ratio_non_private", "house_price_income_ratio_pri
 RAW_INDICATORS = [col for col in INDICATORS if col not in DERIVED]
 NEGATIVE = set(DIMENSIONS["cost"] + ["pm25"])
 MIN_AVAILABLE = {"economy": 2, "cost": 1, "service": 1, "environment": 1}
-UNITS = dict(zip(RAW_INDICATORS, ["元/人", "元/年", "元/年", "%", "元/平方米", "元/月", "个", "所", "个", "μg/m³", "%", "个"]))
+UNITS = dict(zip(RAW_INDICATORS, ["元/人", "元/年", "元/年", "%", "元/平方米", "元/平方米/月", "个", "所", "个", "μg/m³", "%", "个"]))
 
 
 def read_csv_safely(path):
@@ -60,7 +60,7 @@ def validate_values(frame):
         raw = frame[col]
         values = pd.to_numeric(raw, errors="coerce")
         invalid = raw.notna() & (~np.isfinite(values) | (values < 0))
-        if col in ("gdp_per_capita", "avg_salary_non_private", "avg_salary_private", "house_price", "avg_rent"):
+        if col in ("gdp_per_capita", "avg_salary_non_private", "avg_salary_private", "house_price", "rent_per_sqm"):
             invalid |= values.notna() & (values <= 0)
         if col in ("tertiary_industry_ratio", "good_air_days_ratio"):
             invalid |= values > 100
